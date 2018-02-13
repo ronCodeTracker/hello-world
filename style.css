@@ -1,0 +1,48 @@
+/*
+	Comment
+*/
+
+html   
+
+{
+	border-top: 50px solid purple;
+}
+
+
+
+ .checkbx
+     {
+       width: 900pt;
+	   background-color:  aqua;
+	  
+	 }
+	   
+ .fontsz
+	 {
+	 	font-size: 30pt;
+	 }  
+	   
+	   
+  .header  {
+	     background-color: aqua;
+		 text-align: center;
+		 }
+		 
+		 
+		 
+		 
+ a.button {
+        -webkit-appearance: button;
+       -moz-appearance: button;
+       appearance: button;
+       margin-left: 50px;
+       text-decoration: none;
+	   color: initial;
+       background-color: #FFE9FF;
+	   font-size: 30pt;
+}
+
+
+
+
+
