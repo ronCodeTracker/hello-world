@@ -1,0 +1,179 @@
+<!--  name: Ronald Kiefer 
+        date:    December 31, 2017 update January 24, 2018
+		title:     Fruit and Vegitable Application
+  -->
+
+
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+   <meta charset="utf-8" >
+   <title>fruit application</title>
+   <link href="css/style.css" rel="stylesheet">  
+</head>
+<body>
+
+		
+<!--   Javascript script and functions   ###################################################
+#################################################################################  -->		
+		
+	<script>
+	// run function codeLoad when the application loads
+	window.onload = codeLoad();
+	
+	//  function codeLoad:  which remembers to check checkmark that are saved in local storage
+	function codeLoad()
+	{		
+	    	    var checkedSaved = localStorage.lsOne;		
+	        	if(checkedSaved  === "saved")
+	                {	 	
+	                  	var checkedLocation = document.getElementById("frtOne");
+     	            	checkedLocation.checked = true;
+	                }
+	 
+	 
+	           var checkedSaved2 = localStorage.lsTwo;
+		       if(checkedSaved2 === "saved")
+		           {
+			            var checkedLocation2 = document.getElementById("frtTwo");
+			           checkedLocation2.checked = true;
+		           }
+		
+	 
+	          var checkedSaved3 = localStorage.lsThree;
+		      if(checkedSaved3 === "saved")
+		         {
+			           var checkedLocation3 = document.getElementById("frtThree");
+			           checkedLocation3.checked = true;
+		         }
+			 
+	}
+	
+	//  function to find if all checkboxes are checked and give message of congradulations:     %%%%%%%%%%%%%%%
+	    function checkCheckbox() 
+		  {
+		        var x = document.getElementById("frtOne").checked;
+	            var y = document.getElementById("frtTwo").checked;
+	            var z = document.getElementById("frtThree").checked;
+		   
+		        if(x == true  && y == true && z == true) 
+			              {		     
+			                     document.getElementById("picOne").innerHTML = "I ate all my fruit I need to eat for the day!";
+	                      }
+		    }
+			
+   //  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  //   function to save:      &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+		   function saveOne() 
+		     {		         
+			      localStorage.lsOne = "saved";
+		     }
+	//   2nd function to save second checkbox to memory
+	       function saveTwo()
+		      {		         		         
+			       localStorage.lsTwo = "saved";
+		      }
+	//   3rd function to save third checkbox to memory
+		    function saveThree()
+		       {		          
+		          localStorage.lsThree = "saved";
+		       }
+	
+	// ********************************************************************	   
+    //   function to clear the checkboxes and memory for checkbox one
+	      function clearOne()
+		  {
+		    
+		  	localStorage.lsOne = "notsaved";
+			var checkedNotSaved = document.getElementById("frtOne");
+			checkedNotSaved.checked = false;
+			
+			localStorage.lsTwo = "notsaved";
+			var checkedNotSaved2 = document.getElementById("frtTwo");
+			checkedNotSaved2.checked = false;
+			
+			localStorage.lsThree = "notsaved";
+			var checkedNotSaved3 = document.getElementById("frtThree");
+			checkedNotSaved3.checked = false;
+		  }
+	
+	</script>
+<!--  ##############################################################################
+################################################################################## -->
+  
+  <!--  start body html  -->
+  
+  
+  
+  
+  <!--   Picture    -->
+   <div  id="picOne" style="margin-left: 550px; font-size: 50px" >
+   <img src="pictures/fruitPictures.jpg" width="800"  height="500" align="center"/>
+   </div>
+   <!--  end of Picture -->
+   
+   <br/> <!--  some space  -->
+   <div><br/><br/></div>
+   <div>
+   
+   
+   
+   <!--   checkboxes   -->
+   <div   class="checkbx" > <input type = "checkbox" 
+           id = "frtOne"
+		   style="width: 30px; height: 30px"
+		   
+		   value = "  I ate a fruit" onclick="saveOne();" />	   
+		   
+    <label for = "frtOne" style="font-size: 30pt; margin-left: 15px" > I ate a fruit</label>  <br/>
+	
+	<!--  ****************************************  -->
+	 <input type = "checkbox" 
+           id = "frtTwo"
+		   style="width: 30px; height: 30px"
+		   value = "****" onclick="saveTwo();" />
+	
+	 <label for = "frtTwo" style="font-size: 30pt; margin-left: 15px" >I ate another fruit</label><br/>
+	
+	<!--  ****************************************  -->
+    <input type = "checkbox" 
+           id = "frtThree" 
+		   style="width: 30px; height: 30px"
+		   value = "****" onclick="saveThree();" />
+	
+	 <label for = "frtTwo" style="font-size: 30pt; margin-left: 15px" >I ate my third fruit</label></div>
+	 
+	  <script>
+	   codeLoad();
+	</script>
+	
+	 <br/><br/><br/><br/> 
+	 </div>
+	<!-- *****************************************  -->
+   
+   
+   <!--  buttons   @@@@@@@@@@@@@@@@@@@@@@@@@@  -->   
+    <!--   first div -->
+   <div  class="header">
+   
+   <input type="button" value="Click"  style="height: 75px; width: 200px; font-size: 30pt; background: #FFE9FF;" onclick="checkCheckbox();"/>
+   
+      
+	<input type="button" value="Clear" style="height: 75px; width: 200px; font-size: 30pt; background: #FFE9FF;" onclick="clearOne();"/>
+	
+	<a href="vegApplication2.html" class="button">Go to vegitable application....</a>
+	
+   </div> <!-- end of first div   -->
+   <!--  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  -->
+   
+   
+	<!--  start of div --><br/> <div > <br/> </div><!--  end of div -->
+ <!--<div id="divOutputLabel">*****</div>-->  
+ 
+</body>
+</html><!--  end of program  -->
+
+
+
+
